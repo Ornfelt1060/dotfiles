@@ -1,0 +1,30 @@
+with inspiration from: https://bbs.archlinux.org/viewtopic.php?id=56601 
+
+split the pkg_list.txt to 4-5 files
+
+wait with installing polybar, spotify steam, split python packages up. 
+
+Create shell script and do: for x in $(cat package_list.txt); do sudo pacman -S $x; done
+
+************ THEN ALSO: ************
+sudo pacman -S gnome-tweaks # Not sure if this is necessary
+sudo pacman -S gtk4 gtk3 gtk2
+sudo pacman -S arc-gtk-theme
+gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
+lxappearance
+ 
+install yay via: https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/
+
+install polybar
+
+yay -S nerd-fonts-iosevka
+yay -S nerd-fonts-complete
+yay -S ttf-font-awesome
+yay -S otf-feather
+yay -S ttf-material-icons-git
+sudo pacman -S noto-fonts
+yay -S urxvt-resize-font-git
+
+i3 alternating layouts
+
+pip install pynvim
