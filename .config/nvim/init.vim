@@ -9,7 +9,6 @@ Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
 Plug 'morhetz/gruvbox'
 Plug 'w0ng/vim-hybrid'
-" Plug 'dracula/vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-commentary'
@@ -21,6 +20,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'nvim-treesitter/nvim-treesitter'
 " Plug 'jalvesaq/vimcmdline'
+" Plug 'dracula/vim'
 
 call plug#end() " Initialize plugin system
 
@@ -56,11 +56,9 @@ set shiftround
 set hls
 set ic
 set splitright
-
 " set t_Co=256
 " highlight Normal ctermbg=NONE
 " highlight CursorLine cterm=NONE ctermbg=darkblue
-
 set cursorline
 set autochdir
 set scrolloff=8
@@ -187,13 +185,13 @@ autocmd FileType c inoremap for<Tab> for(int i = 0; i < val; i++){<Enter><Enter>
 set statusline=
 set laststatus=2
 set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" set statusline+=%#Difftext#
-" set statusline+=\ %M "track if changes has been made to file
-" set statusline+=\ %y "show filetype
-" set statusline+=\ %r "ReadOnly flag
-" set statusline+=\ %F "show full path to file
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%#Difftext#
+set statusline+=\ %M "track if changes has been made to file
+set statusline+=\ %y "show filetype
+set statusline+=\ %r "ReadOnly flag
+set statusline+=\ %F "show full path to file
 set statusline+=%= "right side settings
 set statusline+=%#DiffChange#
 set statusline+=\ %c:%l/%L "display column and line pos
@@ -264,7 +262,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Show extra whitespace
 nmap <leader>s /\s\+$/<cr>
 " Remove extra whitespace
-nmap <leader>ws :%s/\s\+$<cr>
+nmap <leader>wa :%s/\s\+$<cr>
 " Format rest of the text with vim formatting, go back and center screen
 nmap <leader>r gqG<C-o>zz
 " Undo break points

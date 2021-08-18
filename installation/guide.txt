@@ -24,6 +24,7 @@ yay -S otf-feather
 yay -S ttf-material-icons-git
 sudo pacman -S noto-fonts
 yay -S urxvt-resize-font-git
+yay -Syu diodon
 
 i3 alternating layouts
 
